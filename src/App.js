@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './components/profile/Profile';
+import profilePicture from './assets/img/Youssef Chebil photo.jpg'
 
 function App() {
+  let bio = "A hardworking engineering student and a learning FullStack Developer at GoMyCode"
+  let name="Youssef Chebil"
+  function alertName(){alert(name)}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile name={name} profession="Student" bio={bio} alertName={alertName}>{profilePicture}</Profile>
     </div>
   );
 }
